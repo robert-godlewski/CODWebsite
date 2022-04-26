@@ -1,0 +1,11 @@
+# server ignores
+server/cod_env
+server/server/__pycache__
+server/db.sqlite3
+
+# client ignores
+client/node_modules/
+
+# root ignores
+frontend/
+planningstructure/
