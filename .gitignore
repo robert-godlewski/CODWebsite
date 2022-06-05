@@ -2,6 +2,10 @@
 frontend/
 planningstructure/
 
+# Server ignores
+server/blog/migrations
+server/crm
+server/admin_data.md
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,react
