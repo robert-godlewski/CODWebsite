@@ -15,3 +15,7 @@ class BlogPost(models.Model):
     #stream_link = models.URLField(max_length=400) - Need to edit
     created_at = models.DateTimeField(timezone.now())
     updated_at = models.DateTimeField(timezone.now())
+
+    # Returns the title of the blog post
+    def __str__(self):
+        return self.title
