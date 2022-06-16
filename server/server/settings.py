@@ -133,5 +133,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Adding in Cors to integrate with react.js
 CORS_ORIGIN_WHITELIST = [
-    'http"//localhost:3000'
+    'http://localhost:3000'
 ]

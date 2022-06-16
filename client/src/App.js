@@ -10,21 +10,23 @@ import AllBlogs from './components/AllBlogs';
 
 
 function App() {
-  //const [blogPosts, setBlogPosts] = useState([]);
+  const [blogPosts, setBlogPosts] = useState([]);
 
   // For testing
+  /*
   let blogPosts = [];
   blogPosts.push({
     'title': 'Test',
     'description': "This is a Test."
   });
+  */
 
   return (
     <div className='App'>
       <BrowserRouter>
         <Routes>
           <Route path='/' 
-          element={<AllBlogs blogPosts={blogPosts}/>}/>
+          element={<AllBlogs blogPosts={blogPosts} setBlogPosts={setBlogPosts}/>}/>
         </Routes>
       </BrowserRouter>
     </div>
