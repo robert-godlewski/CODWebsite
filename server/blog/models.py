@@ -11,8 +11,10 @@ class BlogPost(models.Model):
     description = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField()
-    #img_link = models.ImageField(upload_to=None) - Need to edit
-    #stream_link = models.URLField(max_length=400) - Need to edit
+    # URLField doesn't really work with img_link - Maybe Try out FilePathField
+    #img_link = models.URLField(max_length=500, default="")
+    img_link = models.FilePathField(path="../client/src/static/images", allow_files=True, allow_folders=False)
+    stream_link = models.URLField(max_length=500, default="")
     created_at = models.DateTimeField(timezone.now())
     updated_at = models.DateTimeField(timezone.now())
 

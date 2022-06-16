@@ -30,7 +30,9 @@ const AllBlogs = (props) => {
                         <article>
                             <h1>{blog.title}</h1>
                             <h4>{blog.start_date} - {blog.end_date}</h4>
+                            <img src={blog.img_link} alt='#'/>
                             <p>{blog.description}</p>
+                            <p>{blog.stream_link}</p>
                         </article>
                     ))
                 }
