@@ -7,19 +7,11 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 // Components
 import AllBlogs from './components/AllBlogs';
+import OneBlog from './components/OneBlog';
 
 
 function App() {
   const [blogPosts, setBlogPosts] = useState([]);
-
-  // For testing
-  /*
-  let blogPosts = [];
-  blogPosts.push({
-    'title': 'Test',
-    'description': "This is a Test."
-  });
-  */
 
   return (
     <div className='App'>
@@ -27,6 +19,7 @@ function App() {
         <Routes>
           <Route path='/' 
           element={<AllBlogs blogPosts={blogPosts} setBlogPosts={setBlogPosts}/>}/>
+          <Route path='/blog/:id' element={<OneBlog/>}/>
         </Routes>
       </BrowserRouter>
     </div>

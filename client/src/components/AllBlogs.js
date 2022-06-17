@@ -1,6 +1,7 @@
 // JS Libraries
 import React, {useEffect} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 // Components
 import NavBar from './NavBar';
@@ -25,21 +26,14 @@ const AllBlogs = (props) => {
         <>
             <NavBar/>
             <div>
-                {
-                    blogPosts.map((blog, index) => (
-                        <article>
-                            <p>{blog.id}</p>
+                {blogPosts.map((blog, index) => (
+                    <article>
+                        <Link to={`/blog/${blog.id}`}>
                             <h1>{blog.title}</h1>
-                            <h4>{blog.start_date} - {blog.end_date}</h4>
-                            <img src={blog.img_link} alt={blog.img_description}/>
-                            {/* 
-                            Not sure if I want to keep the description in or just have individual links for the articles.
-                            */}
-                            <p>{blog.description}</p>
-                            <p>{blog.stream_link}</p>
-                        </article>
-                    ))
-                }
+                        </Link>
+                        <p>{blog.start_date} - {blog.end_date}</p>
+                    </article>
+                ))}
             </div>
             <FooterBar/>
         </>
