@@ -4,11 +4,9 @@ planningstructure/
 
 # Server ignores
 server/blog/migrations
+server/blog/static
 server/crm
 server/admin_data.md
-
-# Client ignores
-client/src/static
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,react

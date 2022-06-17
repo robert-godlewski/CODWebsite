@@ -1,13 +1,12 @@
 # Description
-This is the Comet of Dreams website.  The site is built off of Django (Python) and React.js (JavaScript).
+This is the Comet of Dreams website.  The site is built off of Django (Python) and React.js (JavaScript).  So far only has a blog to keep fans updated over time.
 
 Will use Heroku for web hosting and Google Domains for Domain Registration.
 
 # Server Features implementing - With Django
-1. Blog/News - Keeps a database of full articles of what COD is duing currently.
-2. Admin Dashboard (CMS) - For tracking media images/ sound/ video
-3. CRM (Admin Dashboard) - interaction tracking, lead management, email manager, reporting and analytics, todo list for COD, etc.
-4. eCommerce Store - Sell digital downloads and other merchandise
+1. Admin Dashboard (CMS) - For tracking media images/ sound/ video
+2. CRM (Admin Dashboard) - interaction tracking, lead management, email manager, reporting and analytics, todo list for COD, etc.
+3. eCommerce Store - Sell digital downloads and other merchandise
 
 # Client Features implementing
 - HTML5 - Look, including iframe tags for streaming links
@@ -26,13 +25,10 @@ Using pipenv as the virtual environment, Pipfile and Pipfile.lock are in the Roo
 
 Running on http://localhost:8000 off of pipenv for Django development
 
-# Blog data components
-* id - Integer
-* Title - String
-* Graphic images - file links? - Strings
-* Description - String
-* Audio/visual frames - links? - Strings
-* start date - date
-* end date - date
-* created at - datetime
-* updated at - datetime - only edit if it's admin
+# Server todos:
+1. Figure out a way to only have an admin delete blog posts and not others.
+2. Figure out a way to display the image files, most likely in blog folder.
+
+# Client todos:
+1. Be able to look at each individual blog post.
+2. 

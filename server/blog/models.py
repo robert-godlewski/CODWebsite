@@ -11,10 +11,10 @@ class BlogPost(models.Model):
     description = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField()
-    # URLField doesn't really work with img_link - Maybe Try out FilePathField
-    #img_link = models.URLField(max_length=500, default="")
-    img_link = models.FilePathField(path="../client/src/static/images", allow_files=True, allow_folders=False)
-    stream_link = models.URLField(max_length=500, default="")
+    # Might not need the img_link and img_description
+    img_link = models.FilePathField(path="../server/blog/static/images", allow_files=True, allow_folders=False, blank=True)
+    img_description = models.CharField(max_length=200, blank=True)
+    stream_link = models.URLField(max_length=500, blank=True)
     created_at = models.DateTimeField(timezone.now())
     updated_at = models.DateTimeField(timezone.now())
 

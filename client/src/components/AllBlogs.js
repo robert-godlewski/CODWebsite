@@ -28,9 +28,13 @@ const AllBlogs = (props) => {
                 {
                     blogPosts.map((blog, index) => (
                         <article>
+                            <p>{blog.id}</p>
                             <h1>{blog.title}</h1>
                             <h4>{blog.start_date} - {blog.end_date}</h4>
-                            <img src={blog.img_link} alt='#'/>
+                            <img src={blog.img_link} alt={blog.img_description}/>
+                            {/* 
+                            Not sure if I want to keep the description in or just have individual links for the articles.
+                            */}
                             <p>{blog.description}</p>
                             <p>{blog.stream_link}</p>
                         </article>
