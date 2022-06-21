@@ -5,6 +5,7 @@ planningstructure/
 # Server ignores
 server/blog/migrations
 server/blog/static
+server/cms/migrations
 server/crm
 server/admin_data.md
 

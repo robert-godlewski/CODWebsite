@@ -4,7 +4,7 @@ This is the Comet of Dreams website.  The site is built off of Django (Python) a
 Will use Heroku for web hosting and Google Domains for Domain Registration.
 
 # Server Features implementing - With Django
-1. Admin Dashboard (CMS) - For tracking media images/ sound/ video
+1. Admin Dashboard (CMS) - For tracking music releases, media images/ sound/ video - import Django CMS plugin
 2. CRM (Admin Dashboard) - interaction tracking, lead management, email manager, reporting and analytics, todo list for COD, etc.
 3. eCommerce Store - Sell digital downloads and other merchandise
 
@@ -25,10 +25,14 @@ Using pipenv as the virtual environment, Pipfile and Pipfile.lock are in the Roo
 
 Running on http://localhost:8000 off of pipenv for Django development
 
+# Todos:
+1. Do a lot of the server end for everything (at least to get started)
+2. Figure out basic template layout
+3. Apply React to interact with the client
+
 # Server todos:
 1. Figure out a way to only have an admin delete blog posts and not others.
 2. Figure out a way to display the image files, most likely in blog folder.
 
 # Client todos:
 1. Be able to look at each individual blog post.
-2. 

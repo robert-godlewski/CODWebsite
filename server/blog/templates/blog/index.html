@@ -7,17 +7,41 @@
     <title>Comet of Dreams</title>
     <script crossorigin="" src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 1px dashed black;
+        }
+    </style>
 </head>
 <body>
     <!-- Use React for the header = logo, nav bar, etc. -->
-    <h1>Comet of Dreams Blog</h1>
+    <p>-------------------React off view------------------</p>
+    <p>-----------------NavBar here-----------------</p>
+    <p>################################################################################</p>
+    <h1>Comet of Dreams Blog - only for Django Build</h1>
+    <p>################################################################################</p>
     {% for blog in posts %}
     <article>
         <h1>{{blog.title}}</h1>
+        {% if blog.img_link %}
+        <p>#######################</p>
+        <p>{{blog.img_link}} => {{blog.img_description}}</p>
+        <p>#######################</p>
+        <img src={{blog.img_link}} alt={{blog.img_description}}/>
+        {% endif %}
+        {% if blog.stream_link %}
+        <p>#######################</p>
+        <p>{{blog.stream_link}}</p>
+        <p>#######################</p>
+        <iframe src={{blog.stream_link}} width="90%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        {% endif %}
         <p>{{blog.start_date}} - {{blog.end_date}}</p>
         <p>{{blog.description}}</p>
     </article>
     {% endfor %}
     <!-- Use React for the footer -->
+    <p>------------------FooterBar here---------------------</p>
 </body>
 </html>
