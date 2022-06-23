@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comet of Dreams - {% block title %}{% endclock %}</title>
+    <script crossorigin="" src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/CometOfDreamsLogo.jpg' %}" alt="Comet of Dreams Logo"/>
+        <nav>
+            <a href="{% url 'index.html' %}">Blog</a>
+            <a href='https://cometofdreams.bandcamp.com/' alt='Link to the Comet of Dreams Bandcamp store'>Store</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    {% block pagecontent %}
+    {% endblock %}
+    <footer>
+        <small>&copy; 2022 Robert Godlewski, Comet of Dreams</small>
+    </footer>
+</body>
+</html>

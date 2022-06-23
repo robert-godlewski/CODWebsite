@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comet of Dreams</title>
-    <script crossorigin="" src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            border: 1px dashed black;
-        }
-    </style>
+    <title>Blog</title>
 </head>
 <body>
     <!-- Use React for the header = logo, nav bar, etc. -->
@@ -29,11 +20,10 @@
         <p>#######################</p>
         <p>{{blog.img_link}} => {{blog.img_description}}</p>
         <p>#######################</p>
-        <img src={{blog.img_link}} alt={{blog.img_description}}/>
         {% endif %}
         {% if blog.stream_link %}
         <p>#######################</p>
-        <p>{{blog.stream_link}}</p>
+        <p>{{blog.stream_link}} => {{blog.stream_description}}</p>
         <p>#######################</p>
         <iframe src={{blog.stream_link}} width="90%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         {% endif %}

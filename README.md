@@ -28,7 +28,8 @@ Running on http://localhost:8000 off of pipenv for Django development
 # Todos:
 1. Do a lot of the server end for everything (at least to get started)
 2. Figure out basic template layout
-3. Apply React to interact with the client
+3. How to get base.html to work
+4. Apply React to interact with the client
 
 # Server todos:
 1. Figure out a way to only have an admin delete blog posts and not others.

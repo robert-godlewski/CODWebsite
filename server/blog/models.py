@@ -12,9 +12,10 @@ class BlogPost(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     # Might not need the img_link and img_description
-    img_link = models.FilePathField(path="../server/blog/static/images", allow_files=True, allow_folders=False, blank=True)
+    img_link = models.FilePathField(path="static/images/", allow_files=True, allow_folders=False, blank=True)
     img_description = models.CharField(max_length=200, blank=True)
     stream_link = models.URLField(max_length=500, blank=True)
+    stream_description = models.CharField(max_length=200, blank=True)
     created_at = models.DateTimeField(timezone.now())
     updated_at = models.DateTimeField(timezone.now())
 
