@@ -9,16 +9,7 @@ from .models import BlogPost
 # Routing for in Django build
 def index(request):
     post_list = BlogPost.objects.order_by('-start_date')
-    print(post_list)
-    print('First one in the list:')
-    print(post_list[0])
-    print(post_list[0].description)
-    print(post_list[0].img_link)
-    print('Second one in the list:')
-    print(post_list[1])
-    print(post_list[1].description)
-    print(post_list[1].img_link)
-    return render(request, 'blog/index.html', context={'posts': post_list})
+    return render(request, template_name='blog/index.html', context={'posts': post_list})
 
 
 # Routing for serializer to transfer data to react
