@@ -31,7 +31,5 @@ Running on http://localhost:8000 off of pipenv for Django development
 3. Apply React to interact with the client
 
 # Server todos:
-1. Figure out a way to only have an admin delete blog posts and not others.
-
-# Client todos:
-1. Be able to look at each individual blog post.
+1. Edit the blog database to have a one to many relation where the "one" is the blog post and the "many" are digital reference links like spotify/ images/ videos/ etc.
+2. Figure out a way to only have an admin delete blog posts and not others.

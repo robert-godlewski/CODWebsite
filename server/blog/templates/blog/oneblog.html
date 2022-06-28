@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block title %}{{blog.title}}{% endblock %}
+
+{% block content %}
+<h1>{{blog.title}}</h1>
+<p>{{blog.start_date}} - {{blog.end_date}}</p>
+{% if blog.img_link %}
+    {# <p>{{blog.img_link}} => {{blog.img_description}}</p> #}
+    <img src="/{{blog.img_link}}" alt="{{blog.img_description}}" width="25%"/>
+{% endif %}
+{% if blog.stream_link %}
+    {# <p>{{blog.stream_link}} => {{blog.stream_description}}</p> #}
+    <iframe src={{blog.stream_link}} width="50%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+{% endif %}
+<p>{{blog.description}}</p>
+{% endblock %}
