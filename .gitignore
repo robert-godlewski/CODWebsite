@@ -3,7 +3,7 @@ frontend/
 planningstructure/
 
 # Server ignores
-server/blog/migrations
+server/blog/migrations/0*.py
 server/static
 server/admin_data.md
 

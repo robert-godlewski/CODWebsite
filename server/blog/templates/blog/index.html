@@ -4,23 +4,25 @@
 
 {% block content %}
 <h1>Comet of Dreams Blog</h1>
+<section>
+    <h3>Intro</h3>
+    <p>Comet of Dreams is an Instrumental Rock group from the Pacific Northwest.</p>
+</section>
+<section>
+    <h3>Music</h3>
+    {# Maybe automate this by adding in files and links from csm app side #}
+    <iframe src="https://open.spotify.com/embed/artist/7gzLG44im4qLiULTjWvuPr" alt="Comet of Dreams on Spotify" width="50%" height="280" frameBorder="0" allow="encrypted-media"></iframe>
+    <p>Other Streaming Sites we are on.</p>
+    <a href="https://music.apple.com/us/artist/comet-of-dreams/1491678196">Apple Music</a>
+    <a href="https://music.youtube.com/channel/UC-8k49b7m9pGKjT3jigtBrg">YouTube Music</a>
+    <a href="https://music.amazon.com/artists/B082S5V633/comet-of-dreams">Amazon Music</a>
+    <p>Social Media Platform</p>
+    <a href="https://www.instagram.com/cometofdreamsband">Instagram</a>
+</section>
 {% for blog in posts %}
-    <article>
-        <h1>{{blog.title}}</h1>
-        {% if blog.img_link %}
-            {# <p>#######################</p> #}
-            {# <p>{{blog.img_link}} => {{blog.img_description}}</p> #}
-            {# <p>#######################</p> #}
-            <img src="{{blog.img_link}}" alt="{{blog.img_description}}" width="50%"/>
-        {% endif %}
-        {% if blog.stream_link %}
-            {# <p>#######################</p> #}
-            {# <p>{{blog.stream_link}} => {{blog.stream_description}}</p> #}
-            {# <p>#######################</p> #}
-            <iframe src={{blog.stream_link}} width="70%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        {% endif %}
+    <article style="border: 1px black solid;">
+        <a href="blog/{{blog.id}}"><h1>{{blog.title}}</h1></a>
         <p>{{blog.start_date}} - {{blog.end_date}}</p>
-        <p>{{blog.description}}</p>
     </article>
 {% endfor %}
 {% endblock %}
