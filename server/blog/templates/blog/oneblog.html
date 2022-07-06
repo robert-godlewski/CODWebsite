@@ -3,15 +3,16 @@
 {% block title %}{{blog.title}}{% endblock %}
 
 {% block content %}
-<h1>{{blog.title}}</h1>
+<h1 class="m-2">{{blog.title}}</h1>
 <p>{{blog.start_date}} - {{blog.end_date}}</p>
 {% if blog.img_link %}
     {# <p>{{blog.img_link}} => {{blog.img_description}}</p> #}
-    <img src="/{{blog.img_link}}" alt="{{blog.img_description}}" width="25%"/>
+    <img src="/{{blog.img_link}}" alt="{{blog.img_description}}" class="col-4 m-2"/>
 {% endif %}
 {% if blog.stream_link %}
     {# <p>{{blog.stream_link}} => {{blog.stream_description}}</p> #}
-    <iframe src={{blog.stream_link}} width="50%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    {# <iframe src={{blog.stream_link}} class="col-12 m-2" width="90%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> #}
+    <iframe src={{blog.stream_link}} class="col-12 m-2" height="280"></iframe>
 {% endif %}
 <p>{{blog.description}}</p>
 {% endblock %}

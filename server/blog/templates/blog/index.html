@@ -3,26 +3,36 @@
 {% block title %}Blog{% endblock %}
 
 {% block content %}
-<h1>Comet of Dreams Blog</h1>
-<section>
-    <h3>Intro</h3>
-    <p>Comet of Dreams is an Instrumental Rock group from the Pacific Northwest.</p>
-</section>
-<section>
-    <h3>Music</h3>
-    {# Maybe automate this by adding in files and links from csm app side #}
-    <iframe src="https://open.spotify.com/embed/artist/7gzLG44im4qLiULTjWvuPr" alt="Comet of Dreams on Spotify" width="50%" height="280" frameBorder="0" allow="encrypted-media"></iframe>
-    <p>Other Streaming Sites we are on.</p>
-    <a href="https://music.apple.com/us/artist/comet-of-dreams/1491678196">Apple Music</a>
-    <a href="https://music.youtube.com/channel/UC-8k49b7m9pGKjT3jigtBrg">YouTube Music</a>
-    <a href="https://music.amazon.com/artists/B082S5V633/comet-of-dreams">Amazon Music</a>
-    <p>Social Media Platform</p>
-    <a href="https://www.instagram.com/cometofdreamsband">Instagram</a>
-</section>
-{% for blog in posts %}
-    <article style="border: 1px black solid;">
-        <a href="blog/{{blog.id}}"><h1>{{blog.title}}</h1></a>
+<div class="container row">
+    <section class="container row m-2">
+        <h3>Intro</h3>
+        <p>Comet of Dreams is an Instrumental Rock group from the Pacific Northwest.</p>
+    </section>
+    <section class="container row m-2">
+        <h3 class="col-12">Music</h3>
+        {# Maybe automate this by adding in files and links from csm app side #}
+        <div class="col-6">
+            <h4>Spotify</h4>
+            <iframe src="https://open.spotify.com/embed/artist/7gzLG44im4qLiULTjWvuPr" alt="Comet of Dreams on Spotify" height="280"></iframe>
+        </div>
+        <div class="col-6">
+            <h4>Other Streaming Sites</h4>
+            <a href="https://music.apple.com/us/artist/comet-of-dreams/1491678196" class="col-12 my-2 btn btn-secondary">Apple Music</a>
+            <a href="https://music.youtube.com/channel/UC-8k49b7m9pGKjT3jigtBrg" class="col-12 my-2 btn btn-secondary">YouTube Music</a>
+            <a href="https://music.amazon.com/artists/B082S5V633/comet-of-dreams" class="col-12 my-2 btn btn-secondary">Amazon Music</a>
+            <h4>Social Media Platform</h4>
+            <a href="https://www.instagram.com/cometofdreamsband" class="col-12 btn btn-secondary">Instagram</a>
+        </div>
+    </section>
+    <div class="col-12 line-break"></div>
+</div>
+<div class="container row">
+    <h1>Comet of Dreams Blogs</h1>
+    {% for blog in posts %}
+    <article class="col-5 m-4 p-2">
+        <a href="blog/{{blog.id}}"><h3>{{blog.title}}</h3></a>
         <p>{{blog.start_date}} - {{blog.end_date}}</p>
     </article>
-{% endfor %}
+    {% endfor %}
+</div>
 {% endblock %}

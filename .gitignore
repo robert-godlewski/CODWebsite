@@ -4,7 +4,7 @@ planningstructure/
 
 # Server ignores
 server/blog/migrations/0*.py
-server/static
+server/static/images
 server/admin_data.md
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,react
