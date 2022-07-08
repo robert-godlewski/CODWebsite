@@ -6,6 +6,7 @@ planningstructure/
 server/blog/migrations/0*.py
 server/static/images
 server/admin_data.md
+server/text_info.md
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,react

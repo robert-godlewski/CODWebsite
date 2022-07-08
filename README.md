@@ -3,6 +3,10 @@ This is the Comet of Dreams website.  The site is built off of Django (Python). 
 
 Will use Heroku for web hosting and Google Domains for Domain Registration.
 
+## Streaming links
+* The Voyage EP on Spotify: https://open.spotify.com/embed/album/51xTpzSSnS6jPDaBvdG1cX
+* Crusader EP on Spotify: https://open.spotify.com/embed/album/0DqbksBoEQdHsO2ZrbGcWp?si=GJ0QMOa6THmklmBzkjECfg
+
 # Server Features implementing - With Django
 1. Admin Dashboard (/CMS) - For tracking music releases, media images/ sound/ video
 2. CRM - interaction tracking, lead management, email manager, reporting and analytics, todo list for COD, etc.
@@ -31,7 +35,7 @@ Running on http://localhost:8000 off of pipenv for Django development
 4. Make a Free Heroku account to push this project online via Comet of Dreams account.
 
 # Server todos:
-1. Edit the blog database to have a one to many relation where the "one" is the blog post and the "many" are digital reference links like spotify/ images/ videos/ etc.
+1. Edit the blog database to have a many to many relation where blog posts have many digital references (images/ videos/ links/ erc.) and digital references belong to many blog posts. - Blog-CMS app talk to eachother.
 2. Figure out a way to only have an admin delete blog posts and not others.
 
 # CMS/ Admin Dashboard Plans: - Will need to implement

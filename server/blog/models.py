@@ -9,9 +9,10 @@ class BlogPost(models.Model):
     # id is automatically created after making migrations
     title = models.CharField(max_length=100)
     description = models.TextField()
-    start_date = models.DateField()
-    end_date = models.DateField()
-    # Might not need the img_link and img_description
+    start_date = models.DateField(blank=True)
+    end_date = models.DateField(blank=True)
+    #is_about = check-box, default=False
+    # Take out img_link, img_description, stream_link, and stream_description
     img_link = models.FilePathField(path="static/images/", allow_files=True, allow_folders=False, blank=True)
     img_description = models.CharField(max_length=200, blank=True)
     stream_link = models.URLField(max_length=500, blank=True)
